@@ -20,15 +20,15 @@ This project provides a complete plan for installing a dual-battery system in a 
 
 ### Protection & Distribution
 1. **Blue Sea 5184 Terminal Fuse (125A)**: Protects Garmin PowerSwitch from aux battery
-2. **Blue Sea 5178 Terminal Fuse (60A)**: Protects second Garmin channel from aux battery
+2. **Blue Sea 5178 Terminal Fuse (60A)**: Protects 4-circuit fuse block from aux battery
 3. **Blue Sea 5045 Compact Blade Fuse Block (4 Circuits)**: Protects cabin accessories
 4. **Blue Sea 2151 Dual Terminal Fuse Block**: For aux battery connection point (optional)
 
 ### Cables & Hardware
 - **8 AWG** cable: Starter battery to charger input (per Renogy specs)
 - **10 AWG** cable: Charger output to aux battery (per Renogy specs)
-- **10 AWG** cable: Aux battery to Garmin PowerSwitch (for 20-30A loads)
-- **10 AWG** cable: Aux battery to 4-circuit fuse block
+- **10 AWG** cable: Aux battery to Garmin PowerSwitch (for high-current loads)
+- **10 AWG** cable: Aux battery to 4-circuit fuse block (via 60A fuse)
 - **10 AWG** cable: 4-circuit fuse block to DC-DC charger input
 - **12 AWG** cable: Radio main unit power connection
 - Appropriate length LMR-195 coaxial cable for antenna
@@ -49,8 +49,9 @@ This project provides a complete plan for installing a dual-battery system in a 
 - ✅ Charger output (20A) < Aux Battery BMS (30A)
 - ✅ All connections properly fused at or below wire ratings
 - ✅ Wire gauges meet manufacturer specifications
-- ✅ Garmin connections use 10 AWG for high-current capability
-- ✅ 125A and 60A fuses protect Garmin from overcurrent
+- ✅ Garmin connection uses 10 AWG for high-current capability
+- ✅ 125A fuse protects Garmin from overcurrent
+- ✅ 60A fuse protects 4-circuit fuse block
 - ✅ 4-circuit fuse block (30A per circuit max) protects cabin loads
 - ✅ Total system design within all component ratings
 
@@ -74,6 +75,7 @@ START BATTERY (Engine Bay)
 │   ┌─────────────────────────────┐        │
 │   │  4-Circuit Blade Fuse Block │        │
 │   │  (30A per circuit max)       │        │
+│   │  (powered by 60A fuse)       │        │
 │   └──────────┬──────────────────┘        │
 │              │ 10 AWG                     │
 │              ↓                            │
@@ -90,12 +92,12 @@ START BATTERY (Engine Bay)
 │   └──┬────┬──────────────────┬──┘        │
 │      │    │                  │           │
 │      │    │ 12 AWG           │ 10 AWG    │
+│      │    │                  │ (60A fuse)│
 │      │    ↓                  ↓           │
 │      │  Radio              4-Circuit     │
 │      │  (13A max)          Fuse Block    │
-│      │                     (accessories)  │
 │      │                                   │
-│      │ 10 AWG (125A fuse) & 10 AWG (60A) │
+│      │ 10 AWG (125A fuse)                │
 │      │ (through firewall)                │
 └──────┼───────────────────────────────────┘
        ↓
@@ -107,7 +109,7 @@ START BATTERY (Engine Bay)
 │                              │
 │   ┌────────────────────┐     │
 │   │ Garmin PowerSwitch │     │
-│   │ (2x high-amp fuses)│     │
+│   │ (125A fused)       │     │
 │   │ For light bars     │     │
 │   └────────────────────┘     │
 │                              │
@@ -146,19 +148,14 @@ START BATTERY (Engine Bay)
 - Ensure adequate ventilation
 
 #### 2.2 Prepare Garmin Power Cables (For Future Light Bars)
-These cables will run FROM the aux battery TO the Garmin:
+This cable will run FROM the aux battery TO the Garmin:
 
-1. **Primary Channel (High Current)**:
+1. **Primary Power Channel**:
    - 10 AWG positive cable with 125A Blue Sea 5184 Terminal Fuse
    - Connect fuse close to aux battery positive terminal
    - Route through firewall (driver side lower hole)
 
-2. **Secondary Channel**:
-   - 10 AWG positive cable with 60A Blue Sea 5178 Terminal Fuse
-   - Connect fuse close to aux battery positive terminal
-   - Route through same firewall path
-
-3. **Ground**:
+2. **Ground**:
    - 10 AWG negative cable
    - Will connect to Garmin GND terminal
    - Ground at aux battery negative terminal in cabin
@@ -182,10 +179,9 @@ These cables will run FROM the aux battery TO the Garmin:
 2. 8 AWG negative from starter battery (for charger input)
 3. IGN signal wire (if needed for smart alternator - consult 4Runner manual)
 
-**Cables going CABIN → ENGINE BAY** (3 cables):
-1. 10 AWG positive with 125A fuse (Garmin channel 1)
-2. 10 AWG positive with 60A fuse (Garmin channel 2)
-3. 10 AWG negative (Garmin ground)
+**Cables going CABIN → ENGINE BAY** (2 cables):
+1. 10 AWG positive with 125A fuse (Garmin power)
+2. 10 AWG negative (Garmin ground)
 
 **Routing Procedure**:
 1. Remove factory plug/seal from driver side lower firewall hole
@@ -253,7 +249,7 @@ These cables will run FROM the aux battery TO the Garmin:
 
 **Connections**:
 1. **Input Power**:
-   - Positive: 10 AWG from aux battery positive (with 30A fuse at battery)
+   - Positive: 10 AWG from aux battery positive (with 60A Blue Sea 5178 Terminal Fuse at battery)
    - Negative: Connect to aux battery negative
 
 2. **Output Circuits** (load side - 30A max per circuit):
@@ -265,6 +261,8 @@ These cables will run FROM the aux battery TO the Garmin:
 **Fusing**:
 - Circuit 1: 30A blade fuse (for charger input line)
 - Other circuits: Size based on future load requirements
+
+**Note**: The 60A terminal fuse at the battery protects the entire fuse block and all downstream loads.
 
 #### 4.5 Install Radio
 
@@ -288,22 +286,21 @@ These cables will run FROM the aux battery TO the Garmin:
 #### 5.1 Connect Power to Garmin (In Engine Bay)
 
 From cabin, you've routed:
-- 10 AWG positive with 125A fuse (for high-current channel)
-- 10 AWG positive with 60A fuse (for second channel)
+- 10 AWG positive with 125A fuse (for power)
 - 10 AWG negative (ground)
 
 **Connect to Garmin**:
 1. Open Garmin front cover
 2. Connect large ring end of ground wire to GND terminal on Garmin
 3. Connect 125A fused positive to +12V terminal (torque to 4.52 N-m max)
-4. Connect 60A fused positive to first accessory terminal
-5. Close and latch cover
+4. Close and latch cover
 
 ⚠️ **Future Light Bar Connections**:
-- When installing light bars, connect their positive wires to the remaining accessory terminals
+- When installing light bars, connect their positive wires to the accessory terminals
 - Each light bar's ground goes to chassis ground or battery negative (NOT to Garmin)
 - Maximum 30A per accessory channel
 - Maximum 100A total system
+- The Garmin has 4 accessory channels available for future use
 
 ---
 
@@ -354,11 +351,10 @@ Before reconnecting starter battery:
 | Starter to Charger Input | 8 AWG | 20A | 30A |
 | Charger to Aux Battery | 10 AWG | 20A | 25A |
 | Aux Battery to Radio | 12 AWG | 13A | 15A |
-| Aux Battery to Garmin (125A) | 10 AWG | 30A | 125A* |
-| Aux Battery to Garmin (60A) | 10 AWG | 30A | 60A* |
-| Aux Battery to Fuse Block | 10 AWG | 30A | 30A |
+| Aux Battery to Garmin | 10 AWG | 30A | 125A* |
+| Aux Battery to Fuse Block | 10 AWG | 60A | 60A |
 
-\* These large fuses are for future high-current light bar installations
+\* 125A fuse sized for future high-current light bar installations
 
 ### Critical Safety Fusing Points
 
@@ -368,12 +364,12 @@ Before reconnecting starter battery:
 2. **At Auxiliary Battery** (Cabin):
    - 25A fuse for DC-DC charger output (if not integrated in charger)
    - 15A fuse for radio power
-   - 125A terminal fuse for Garmin channel 1
-   - 60A terminal fuse for Garmin channel 2
-   - 30A fuse for 4-circuit fuse block input
+   - 125A terminal fuse for Garmin PowerSwitch
+   - 60A terminal fuse for 4-circuit fuse block input
 
 3. **At 4-Circuit Fuse Block**:
    - Individual blade fuses per circuit (size based on load)
+   - Recommended: 30A for charger input circuit
 
 ### Connection Torque Specifications
 - **Garmin +12V terminal**: 4.52 N-m (40 lbf-in) - DO NOT OVERTIGHTEN
@@ -456,7 +452,7 @@ Before reconnecting starter battery:
 |---------|---------------|----------|
 | Won't pair | Battery voltage too low | Charge batteries, verify >12V |
 | Outputs off | Battery protection mode | System turns off below 11V automatically |
-| No power | Fuse blown | Check 125A and 60A terminal fuses |
+| No power | Fuse blown | Check 125A terminal fuse |
 
 ---
 
