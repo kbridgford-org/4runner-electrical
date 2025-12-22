@@ -19,9 +19,7 @@ Here are the technical specifications for the **Icom IC-2730B Black Edition** fo
 
 | Feature | Specification |
 | --- | --- |
-| **Frequency Coverage (USA)** | **Transmit:** 144–148, 430–450MHz<br>
-
-<br>**Receive:** 118–174, 375–550MHz*¹ |
+| **Frequency Coverage (USA)** | **Transmit:** 144–148, 430–450MHz, **Receive:** 118–174, 375–550MHz*¹ |
 | **Number of Channels** | 1052 channels (including 50 scan edges and 2 Call) |
 | **Type of Emission** | F2D, F3E (FM, FM-N) |
 | **Frequency Stability** | ±2.5ppm (−10°C to +60°C) |
@@ -32,9 +30,7 @@ Here are the technical specifications for the **Icom IC-2730B Black Edition** fo
 | **Operating Temp. Range** | −10°C to +60°C; 14°F to +140°F |
 | **Dimensions (Main Unit)** | 150 × 40 × 151 mm; 5.91 × 1.57 × 5.94 in |
 | **Dimensions (Controller)** | 150 × 50 × 27.2 mm; 5.91 × 1.97 × 1.07 in |
-| **Weight** | **Main Unit:** 1.2 kg (2.65 lb)<br>
-
-<br>**Controller:** 140 g (4.94 oz) |
+| **Weight** | **Main Unit:** 1.2 kg (2.65 lb), **Controller:** 140 g (4.94 oz) |
 
 **1 Guaranteed range: 144–148, 430–450MHz.*
 
@@ -51,14 +47,10 @@ Here are the technical specifications for the **Icom IC-2730B Black Edition** fo
 
 | Feature | Specification |
 | --- | --- |
-| **Intermediate Frequencies** | **A Band:** 38.85MHz / 450kHz<br>
-
-<br>**B Band:** 46.35MHz / 450kHz |
+| **Intermediate Frequencies** | **A Band:** 38.85MHz / 450kHz, **B Band:** 46.35MHz / 450kHz |
 | **Sensitivity (12dB SINAD)** | Less than 0.18μV (Amateur bands) |
 | **Selectivity** | More than 60dB / 55dB (Wide/Narrow) |
-| **Spurious Response Rejection** | **A Band:** >60dB/55dB (V/U)<br>
-
-<br>**B Band:** >60dB/60dB (V/U) |
+| **Spurious Response Rejection** | **A Band:** >60dB/55dB (V/U) **B Band:** >60dB/60dB (V/U) |
 | **Audio Output Power** | More than 2.0W (10% distortion, 8Ω) |
 | **External Speaker Jack** | 2-conductor 3.5 (d) mm (1⁄8″) / 8Ω |
 
