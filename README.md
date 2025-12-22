@@ -257,7 +257,7 @@ These cables will run FROM the aux battery TO the Garmin:
    - Negative: Connect to aux battery negative
 
 2. **Output Circuits** (load side - 30A max per circuit):
-   - **Circuit 1**: DC-DC charger input power (8 AWG to starter battery)
+   - **Circuit 1**: DC-DC charger input power (8 AWG from starter battery)
    - **Circuit 2**: Future accessory
    - **Circuit 3**: Future accessory
    - **Circuit 4**: Future accessory
@@ -438,7 +438,7 @@ Before reconnecting starter battery:
 |---------|---------------|----------|
 | Charger not turning on | No alternator detection | Start engine, verify voltage at input |
 | Fast flash red | Aux battery overvoltage | Check battery, verify LI mode selected |
-| Jumping flash red | Aux battery overdischarge | Recharge battery to >12V |
+| Jumping flash red | Aux battery over-discharge | Recharge battery to >12V |
 | Solid red | Overtemperature | Improve ventilation, check clearances |
 | Slow flash red | Reverse polarity | Verify all positive/negative connections |
 
