@@ -75,38 +75,39 @@ This project provides a complete plan for installing a dual-battery system in a 
 │  START BATTERY                                        │
 │      │                                                │
 │      ├─ 10 AWG (125A fuse) ──→ Garmin PowerSwitch    │
-│      │                          ├─ Control Input 1 ←─┼─┐
-│      │                          ├─ Control Input 2 ←─┼─┤
-│      │                          ├─ Accessory Out 1   │ │
-│      ├─ 10 AWG (60A fuse) ───→  ├─ Accessory Out 2   │ │
-│      │                          ├─ Accessory Out 3   │ │
-│      │                          ├─ Accessory Out 4   │ │
-│      ↓                          ├─ Accessory Out 5   │ │
-│  4-Circuit Fuse Block           └─ Accessory Out 6   │ │
-│  (30A per circuit)                  (for future      │ │
-│      ├─ Circuit 1 (30A fuse)         light bars)     │ │
-│      │   8 AWG ──────────────────────────────────────┼─┤
-│      ├─ Circuit 2 (future)                           │ │
-│      ├─ Circuit 3 (future)                           │ │
-│      └─ Circuit 4 (future)                           │ │
-│                                                       │ │
-└───────────────────────────────────────────────────────┼─┤
-                                                        │ │
-        [DRIVER SIDE LOWER FIREWALL HOLE]              │ │
-                  │                                     │ │
-                  ↓ 8 AWG power pair                    │ │
-                  ↓ 18-22 AWG control wires             │ │
-                                                        │ │
-┌───────────────────────────────────────────────────────┼─┤
-│          CABIN - Under Driver/Passenger Seat         │ │
-│                                                       │ │
-│  Control Buttons (Driver Side)                       │ │
-│      ├─ Button 1 ─────────────────────────────────────┘ │
-│      └─ Button 2 ───────────────────────────────────────┘
+│      │                          ├─ Control Input 1 ←─┤
+│      │                          ├─ Control Input 2 ←─┤
+│      │                          ├─ Accessory Out 1   │
+│      ├─ 10 AWG (60A fuse) ───→  ├─ Accessory Out 2   │
+│      │                          ├─ Accessory Out 3   │
+│      │                          ├─ Accessory Out 4   │
+│      ↓                          ├─ Accessory Out 5   │
+│  4-Circuit Fuse Block           └─ Accessory Out 6   │
+│  (30A per circuit)                  (for future      │
+│      ├─ Circuit 1 (30A fuse)         light bars)     │
+│      │   8 AWG ─────────────────────────────────────┐│
+│      ├─ Circuit 2 (future)                          ││
+│      ├─ Circuit 3 (future)                          ││
+│      └─ Circuit 4 (future)                          ││
+│                                                      ││
+└──────────────────────────────────────────────────────┘│
+                                                        │
+        [DRIVER SIDE LOWER FIREWALL HOLE]              │
+                  │                                     │
+                  ↓ 8 AWG power pair                    │
+                  ↓ 18-22 AWG control wires             │
+                                                        │
+┌───────────────────────────────────────────────────────┤
+│          CABIN                                        │
 │                                                       │
-│  ┌─────────────────────────────┐                     │
-│  │  Renogy DC-DC Charger       │ (8 AWG input)       │
+│  Control Buttons (on Console)                        │
+│      ├─ Button 1 ─────────────────────────────────┐  │
+│      └─ Button 2 ─────────────────────────────────┤  │
+│                                                    │  │
+│  ┌─────────────────────────────┐                  │  │
+│  │  Renogy DC-DC Charger       │ (8 AWG input) ◄──┘  │
 │  │  (20A, 8 AWG in/10 AWG out) │                     │
+│  │  (under seat)               │                     │
 │  └──────────┬──────────────────┘                     │
 │             │ 10 AWG output                          │
 │             ↓                                        │
@@ -114,11 +115,13 @@ This project provides a complete plan for installing a dual-battery system in a 
 │  │  AUX BATTERY                │                     │
 │  │  12V 20Ah LiFePO4           │                     │
 │  │  (30A BMS Protection)       │                     │
+│  │  (under seat)               │                     │
 │  └──────────┬──────────────────┘                     │
 │             │ 12 AWG (15A fuse)                      │
 │             ↓                                        │
 │         Radio Head                                   │
 │         (13A max)                                    │
+│         (under seat)                                 │
 │                                                       │
 │  Radio Controller (Dash)                             │
 │                                                       │
