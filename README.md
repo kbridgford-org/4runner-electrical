@@ -199,13 +199,23 @@ This project provides a complete plan for installing a dual-battery system in a 
 
 ### Phase 3: Firewall Cable Routing
 
-#### 3.1 Identify Firewall Entry Point
-**Use**: Driver Side Lower Firewall Hole (Clutch Master area)
-- **Size**: 45-50mm (1.75-2")
-- **Location**: Lower driver side, exits near parking brake inside cabin
-- **Best for**: Power and control cables
+#### 3.1 Identify Firewall Entry Points
+
+**Power and Control Cables - Driver Side Upper Hole (Primary Accessory)**:
+- **Size**: 20mm (0.78")
+- **Location**: Upper driver side, exits above interior fuse box
+- **Factory Seal**: Plastic pop-in plug
+- **Use for**: 8 AWG power pair + 18-22 AWG control wires
+
+**Antenna Cable - Passenger Side Hole (Secondary Accessory)**:
+- **Size**: 20mm (0.78")
+- **Location**: Passenger side, exits behind glove box
+- **Factory Seal**: Nipple grommet (snip tip to route wire)
+- **Use for**: LMR-195 coaxial antenna cable (~5mm diameter)
 
 #### 3.2 Route Cables Through Firewall
+
+**Driver Side Upper Hole - Power and Control Cables**:
 
 **Cables going ENGINE BAY → CABIN** (2 power cables + optional IGN):
 1. 8 AWG positive from fuse block Circuit 1 (for Renogy charger input)
@@ -216,43 +226,61 @@ This project provides a complete plan for installing a dual-battery system in a 
 1. 18-22 AWG control wire for Button 1 → Garmin Control Input 1
 2. 18-22 AWG control wire for Button 2 → Garmin Control Input 2
 
-**Routing Procedure**:
-1. Remove factory plug/seal from driver side lower firewall hole
-2. Bundle power cables separately from control wires using cable ties
-3. Protect cable bundles with split loom
-4. Use fish tape or coat hanger to guide bundles through
-5. Seal around cables with appropriate grommet or sealant to prevent water/air intrusion
-6. Leave extra length on both sides for connections (minimum 6" extra)
-7. Label all cables clearly at both ends
+**Routing Procedure - Driver Side Upper**:
+1. Remove factory plastic pop-in plug from driver side upper firewall hole
+2. Bundle power cables together with cable ties
+3. Bundle control wires separately with cable ties
+4. Protect both bundles with split loom
+5. Route through 20mm hole (verified: 8 AWG pair ~6.6mm + control wires ~2mm = ~8.6mm total fits easily)
+6. Seal around cables with appropriate grommet or sealant to prevent water/air intrusion
+7. Leave extra length on both sides for connections (minimum 6" extra)
+8. Label all cables clearly at both ends
+
+**Passenger Side Hole - Antenna Cable**:
+
+**Cable going ENGINE BAY → CABIN**:
+1. LMR-195 coaxial antenna cable (4.95mm diameter)
+
+**Routing Procedure - Passenger Side**:
+1. Locate nipple grommet on passenger side firewall
+2. Snip the tip of the nipple grommet to create opening
+3. Route LMR-195 antenna cable through grommet
+4. Grommet will seal around cable
+5. Route to passenger side ditch light bracket (engine bay side)
+6. Route to radio location behind glove box (cabin side)
 
 ---
 
 ### Phase 4: Cabin Installation
 
-#### 4.1 Choose Seat Location
-**Primary Option**: Under driver seat (more accessible)
-**Alternative**: Under passenger seat if space limited
+#### 4.1 Choose Component Locations
 
-**Space Requirements**:
+**Driver Side Seat**:
 - Aux battery: ~7" x 4" x 7" (approximate)
 - DC-DC charger: 6.54" x 4.53" x 2.32"
-- Radio main unit: 5.91" x 1.57" x 5.94"
+- Keep charger close to battery for optimal performance
 
-**Mounting**:
+**Passenger Side Seat**:
+- Radio main unit: 5.91" x 1.57" x 5.94"
+- Convenient for antenna cable routing from passenger side firewall
+
+**Mounting Requirements**:
 - Secure battery with a battery box or mounting bracket
 - Ensure battery cannot move during vehicle operation
 - Mount charger with at least 5.91" clearance on all sides for ventilation
 - Keep charger as close to battery as possible
 
-#### 4.2 Install Auxiliary Battery
+#### 4.2 Install Auxiliary Battery (Driver Side)
 
-1. **Position battery** under chosen seat
+**Location**: Under driver seat
+
+1. **Position battery** under driver seat
 2. **Secure battery** - must be firmly mounted to prevent movement
 3. **Do NOT connect anything yet** - wait for all components to be staged
 
-#### 4.3 Install DC-DC Battery Charger
+#### 4.3 Install DC-DC Battery Charger (Driver Side)
 
-**Location**: Near aux battery, with proper ventilation (5.91" clearance all sides)
+**Location**: Under driver seat, near aux battery, with proper ventilation (5.91" clearance all sides)
 
 **Wiring Sequence** (per Renogy manual):
 
@@ -276,20 +304,22 @@ This project provides a complete plan for installing a dual-battery system in a 
    - Set battery type to "LI" (Lithium Iron Phosphate)
    - Verify voltage settings: Boost 14.4V, no float mode for LiFePO4
 
-#### 4.4 Install Radio
+#### 4.4 Install Radio (Passenger Side)
 
-**Main Unit**: Under same seat as battery (if space allows), otherwise under other seat
+**Main Unit Location**: Under passenger seat
 **Controller**: Dash mounted for easy access
 
 **Power Connections**:
-1. **Positive**: 12 AWG from aux battery positive (with 15A fuse at battery)
+1. **Positive**: 12 AWG from aux battery (driver side) positive (with 15A fuse at battery)
 2. **Negative**: To aux battery negative or good chassis ground
 3. **Verify**: Max 15A fuse appropriate for 12 AWG wire and 13A max draw
+4. Route power cable from driver side to passenger side under seats
 
 **Antenna**:
-- Route LMR-195 coaxial cable to passenger side ditch light bracket
+- LMR-195 coaxial cable enters cabin through passenger side firewall (20mm hole)
+- Route from firewall (behind glove box) to radio under passenger seat
+- External antenna mounts on passenger side ditch light bracket
 - Use proper cable routing techniques to avoid pinch points
-- May route through door jamb or under trim panels
 
 #### 4.5 Install Control Buttons
 
@@ -539,17 +569,21 @@ The Garmin PowerSwitch provides 6 accessory outputs for future light bar expansi
 - Starter battery (factory location)
 - Antenna on passenger side ditch light bracket
 
-**Firewall**:
-- Driver side lower hole for all cable routing
+**Firewall Routing**:
+- Driver side upper hole (20mm): Power cables (8 AWG pair) + control wires (18-22 AWG pair)
+- Passenger side hole (20mm): Antenna cable (LMR-195 coax)
 
-**Cabin - Under Seat(s)**:
-- Auxiliary LiFePO4 battery (driver or passenger seat)
+**Cabin - Driver Side Seat**:
+- Auxiliary LiFePO4 battery
 - DC-DC battery charger (near battery, proper ventilation)
-- Radio main unit (if space allows, else under other seat)
-- Radio controller (dash mounted)
 
-**Cabin - Driver Side**:
-- Control buttons for Garmin (accessible from driver seat)
+**Cabin - Passenger Side Seat**:
+- Radio main unit
+- Antenna cable connection
+
+**Cabin - Driver Side Accessible**:
+- 2 control buttons for Garmin light control
+- Radio controller (dash mounted)
 
 ---
 
@@ -597,45 +631,6 @@ All technical specifications available in this repository:
 - `garmin-powerswitch.md` - Garmin installation and specifications
 - `fuse-information.md` - Fuse and distribution block specifications
 - `4runner-firewall.md` - Firewall penetration reference
-
----
-
-## Project Timeline
-
-**Estimated Installation Time**: 8-12 hours for beginner
-
-**Day 1** (4-6 hours):
-- Phase 1: Preparation
-- Phase 2: Engine bay work
-- Phase 3: Firewall routing
-
-**Day 2** (4-6 hours):
-- Phase 4: Cabin installation
-- Phase 5: Final connections
-- Phase 6: Testing
-
-**Recommended Approach**: 
-- Take your time
-- Test each phase before proceeding
-- Don't rush - safety first
-- Take breaks to avoid mistakes from fatigue
-
----
-
-## Support & Questions
-
-Before starting:
-1. Read all reference documents in this repository
-2. Review complete plan twice
-3. Gather all materials and tools
-4. Work in good lighting
-5. Have a helper available if possible
-
-During installation:
-- Reference this document at each step
-- Take photos as you go
-- Double-check all connections
-- Test before moving to next phase
 
 ---
 
